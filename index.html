@@ -17,7 +17,7 @@
     <div id="list"></div>
 
     <script>
-        fetch('data.json')
+        fetch('data.json?t=' + new Date().getTime())
             .then(res => res.json())
             .then(data => {
                 document.getElementById('updated').innerText = '最終更新: ' + data.last_updated;
